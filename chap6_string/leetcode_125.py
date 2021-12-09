@@ -7,9 +7,9 @@ class Solution(object):
         :rtype: bool
         """
         # 실행 시간 32ms
-        s = s.lower()
-        s = re.sub('[^a-z0-9]', '', s)
-        return s == s[::-1]
+        s = s.lower()       # 입력받은 문자열에서 대문자를 모두 소문자로 변경
+        s = re.sub('[^a-z0-9]', '', s)  # 문자열에서 소문자, 숫자를 제외한 모든 문자를 ""로 대치.
+        return s == s[::-1] # 역순으로 바꾸기 전과 후의 문자열을 비교해서 True, False 출력
         
         
         # 실행 시간 424ms
@@ -34,7 +34,3 @@ class Solution(object):
 #             return True
 #         else:
 #             return False
-
-
-        
-        
