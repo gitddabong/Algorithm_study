@@ -15,4 +15,4 @@ for word in strs:
     # 정렬하여 딕셔너리에 추가
     anagrams[''.join(sorted(word))].append(word)    
 # print(list(anagrams.values()))    # 굳이 왜 list()로 감쌌나?
-print(anagrams.values())    
+print(anagrams.values())

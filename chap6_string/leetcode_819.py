@@ -33,3 +33,5 @@ class Solution(object):
         # counts.most_common()[0][0] 라고 작성해도 결과는 똑같이 나오는데, 
         # 위의 코드가 실행시간이 절반. 왜?? 
         # 0,0 인덱스로 접근해야 될 전체 데이터량이 많아서 그런가?
+
+        # help(Counter.most_common)
