@@ -37,17 +37,27 @@ class Solution(object):
 
         #     return result
 
+        nums = [1,2,3,4]
+
         left = [1] * len(nums)
         right = [1] * len(nums)
                 
         for i in range(1, len(nums)):
             left[i] = left[i-1] * nums[i-1]
 
+        # 위 반복문이 끝나면 
+        # left = [ , 1, 1*2, 1*2*3] 의 형태로 변화
+
         for i in range(len(nums)-2, -1, -1):
             right[i] = right[i+1] * nums[i+1]
-            
+
+        # 위 반복문이 끝나면 
+        # right = [2*3*4, 3*4, 4, ] 의 형태로 변화
+        
+        # left와 right를 각 인덱스 별로 곱해주면 자기 자신을 제외한 모든 곱을 알 수 있다
         result = [0] * len(nums)
         for i in range(len(nums)):
             result[i] = left[i] * right[i]
+        
 
         return result
