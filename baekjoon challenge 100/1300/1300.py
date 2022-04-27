@@ -7,7 +7,7 @@ if __name__ == "__main__":
   k = int(input())
 
   left = 1
-  right = k
+  right = n**2
   result = 0
 
   while left < right:
@@ -15,10 +15,10 @@ if __name__ == "__main__":
     
     cnt = 0
     for i in range(1, n+1):
-      if mid > n * i:
+      if mid > n * i:   # mid가 그 현재 행의 최댓값보다 큰 경우 행 길이만큼만 카운트 더하기
         cnt += n
       else:
-        cnt += mid // i
+        cnt += mid // i   # mid // i 는 현재 행에서 mid보다 작은 수의 개수
     
     # result = mid
 
