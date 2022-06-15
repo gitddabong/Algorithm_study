@@ -130,3 +130,5 @@ dmypy.json
 
 # 기출 문제 숨김
 /기출 문제
+
+test.py
